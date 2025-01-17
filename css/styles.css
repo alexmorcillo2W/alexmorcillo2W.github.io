@@ -1,0 +1,382 @@
+:root {
+    --blue-light: rgb(144, 171, 186);
+    --blue-teal: rgb(0, 98, 105);
+    --teal: rgb(0, 62, 69);
+    --blue: rgb(0, 96, 137);
+    --blue-midnight: rgb(11, 16, 29);
+    --black: rgb(9, 4, 0);
+    --dark-grey: rgb(87, 88, 90);
+    --mid-grey: rgb(147, 149, 152);
+    --light-grey: rgb(188, 189, 192);
+    --white: rgb(255, 255, 255);
+    --yellow-light: rgb(249, 222, 104);
+    --yellow-gold: rgb(221, 166, 58);
+    --yellow-dark: rgb(198, 134, 23);
+    --brown-light: rgb(158, 126, 79);
+    --brown-dark: rgb(80, 14, 0);
+    --red-dark: rgb(194, 0, 36);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--light-grey);
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    border-bottom: solid 3px var(--blue);
+    background-color: var(--white);
+}
+
+header h1 {
+    color: var(--blue);
+}
+
+.logo {
+    width: 17rem;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+    margin: 1rem 1rem 1rem 0;
+    color: var(--mid-grey);
+}
+
+footer {
+    background-color: var(--blue);
+}
+
+.footer-idiomas {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-idiomas button {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.form-container {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+
+/* Landing page BEGIN */
+
+.landing {
+    background: rgb(188,189,192);
+    background: linear-gradient(90deg, rgba(188,189,192,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 93%, rgba(188,189,192,1) 100%);
+}
+
+.banner {
+    position: relative;
+    background-image: url('../images/banner_landing.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--blue);
+    padding: 2rem;
+    border-radius: 16px;
+    animation: bubbleIn 0.5s ease-out;
+    transition: transform 0.2s ease;
+}
+.content:hover {
+    transform: scale(1.1);
+}
+
+.landing .boton {
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+}
+.landing .boton:hover {
+    color: var(--white);
+    background-color: var(--teal);
+    transform: scale(1.1);
+}
+.banner .boton a {
+    color: var(--white);
+    text-decoration: none;
+}
+.banner p {
+    color: var(--dark-grey);
+}
+
+.noticias .tarjeta {
+    border: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.noticias .tarjeta:hover {
+    transform: scale(1.05);
+}
+.noticias img {
+    border-radius: 8px 8px 0 0;
+}
+
+.estadisticas {
+    border: solid 2px var(--light-grey);
+}
+.estadisticas h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@keyframes bubbleIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Landing page END */
+
+/* Search page BEGIN */
+
+.buscador section {
+    padding: 2rem 1rem;
+}
+
+.buscador .boton {
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    color: var(--white);
+    width: 50%;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+}
+.buscador .boton:hover {
+    color: var(--white);
+    background-color: var(--teal);
+    transform: scale(1.1);
+}
+
+/* Search page END */
+
+/* Contact page BEGIN */
+
+.contacto section {
+    padding: 2rem 1rem;
+}
+
+.contacto .boton {
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    color: var(--white);
+    width: 50%;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+}
+.contacto .boton:hover {
+    color: var(--white);
+    background-color: var(--teal);
+    transform: scale(1.1);
+}
+
+/* Contact page END */
+
+/* Public/Private Lists pages BEGIN */
+
+.pplist {
+    background-color: var(--white);
+}
+
+.pplist .boton {
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+}
+.pplist .boton:hover {
+    color: var(--white);
+    background-color: var(--teal);
+    transform: scale(1.1);
+}
+
+/* Comercio Detail page BEGIN */
+
+.comercio-detail {
+    background-color: var(--white);
+}
+
+.header-detail h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.header-detail p {
+    margin: 0;
+    color: var(--mid-grey);
+}
+
+.imagen-comercio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-contacto {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mapa {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 300px;
+}
+
+/* Comercio Detail page END */
+
+/* Comercio Detail Private page BEGIN */
+
+.header-edit {
+    padding: 20px;
+    border-bottom: 1px solid var(--light-grey);
+}
+.header-edit h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+.buttons button {
+    color: var(--white);
+    transition: transform 0.2s ease;
+}
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+/* Comercio Detail Private page END */
+
+/* Private Landing page BEGIN */
+
+.header-section {
+    background-color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+.header-section p {
+    color: var(--mid-grey);
+    margin-top: 10px;
+}
+
+.tarjetas-gestion {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.tarjetas-gestion:hover {
+    transform: scale(1.05);
+}
+.tarjetas-gestion h5 {
+    font-weight: bold;
+    color: var(--black);
+}
+.tarjetas-gestion .btn-gestion {
+    background-color: var(--blue);
+    color: white;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+.tarjetas-gestion .btn-gestion:hover {
+    background-color: var(--teal);
+    transform: scale(1.1);
+}
+
+/* Private Landing page END */
+
+/* Formulario genérico page BEGIN */
+
+.formulario-generico {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.formulario-generico h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #343a40;
+}
+.formulario-generico .btn {
+    margin-right: 10px;
+    color: var(--white);
+    transition: transform 0.2s ease;
+}
+.formulario-generico .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Formulario genérico page END */
